@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>pin_label_purposes_overlapping_drawing.rb.drc, input=/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt_submission/tt_um_analog_ic_bg_26.gds, topcell=</description>
+ <original-file/>
+ <generator>drc: script='tech-files/pin_label_purposes_overlapping_drawing.rb.drc'</generator>
+ <top-cell>tt_um_analog_ic_bg_26</top-cell>
+ <tags>
+ </tags>
+ <categories>
+  <category>
+   <name>68/16: met1, pin/label not-over drawing:68/20</name>
+   <description/>
+   <categories>
+   </categories>
+  </category>
+ </categories>
+ <cells>
+  <cell>
+   <name>tt_um_analog_ic_bg_26</name>
+   <variant/>
+   <layout-name/>
+   <references>
+   </references>
+  </cell>
+  <cell>
+   <name>bg_top_tt_mag</name>
+   <variant/>
+   <layout-name>bg_top_tt_mag</layout-name>
+   <references>
+    <ref>
+     <parent>tt_um_analog_ic_bg_26</parent>
+     <trans>r0 *1 69.02,6.17</trans>
+    </ref>
+   </references>
+  </cell>
+  <cell>
+   <name>bg_vplus_branch_mag</name>
+   <variant/>
+   <layout-name>bg_vplus_branch_mag</layout-name>
+   <references>
+    <ref>
+     <parent>tt_um_analog_ic_bg_26</parent>
+     <trans>r0 *1 9.78,17.11</trans>
+    </ref>
+   </references>
+  </cell>
+ </cells>
+ <items>
+  <item>
+   <tags/>
+   <category>'68/16: met1, pin/label not-over drawing:68/20'</category>
+   <cell>bg_vplus_branch_mag</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (30.405,24.775;30.405,25.075;31.045,25.075;31.045,25.775;31.405,25.775;31.405,24.775)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'68/16: met1, pin/label not-over drawing:68/20'</category>
+   <cell>bg_vplus_branch_mag</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (30.405,25.285;30.405,25.775;30.765,25.775;30.765,25.285)</value>
+   </values>
+  </item>
+ </items>
+</report-database>

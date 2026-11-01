@@ -1,0 +1,69 @@
+<testsuites>
+  <testsuite name="Tiny Tapeout Prechecks">
+    <testcase name="Magic DRC" time="0.52" />
+    <testcase name="KLayout FEOL" time="2.61">
+      <error message="Klayout feol failed with 1740 DRC violations">Traceback (most recent call last):
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 589, in main
+    check["check"]()
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 497, in &lt;lambda&gt;
+    "check": lambda: klayout_drc(gds_file, "feol"),
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 117, in klayout_drc
+    klayout_custom_drc(check, script, script_vars, ["report", "report_file"])
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 98, in klayout_custom_drc
+    check_drc_report(check, report_file)
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 80, in check_drc_report
+    raise PrecheckFailure(
+precheck_failure.PrecheckFailure: Klayout feol failed with 1740 DRC violations
+</error>
+    </testcase>
+    <testcase name="KLayout BEOL" time="2.61" />
+    <testcase name="KLayout offgrid" time="2.02" />
+    <testcase name="KLayout pin label overlapping drawing" time="1.69">
+      <error message="Klayout pin_label_purposes_overlapping_drawing failed">Traceback (most recent call last):
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 589, in main
+    check["check"]()
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 512, in &lt;lambda&gt;
+    "check": lambda: klayout_drc(
+                     ^^^^^^^^^^^^
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 117, in klayout_drc
+    klayout_custom_drc(check, script, script_vars, ["report", "report_file"])
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 96, in klayout_custom_drc
+    raise PrecheckFailure(f"Klayout {check} failed")
+precheck_failure.PrecheckFailure: Klayout pin_label_purposes_overlapping_drawing failed
+</error>
+    </testcase>
+    <testcase name="KLayout zero area" time="1.63" />
+    <testcase name="KLayout Checks" time="0.01" />
+    <testcase name="Pin check" time="0.01">
+      <error message="Some ports are missing or have wrong dimensions, see 3 LEF errors and 1 GDS error above">Traceback (most recent call last):
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 589, in main
+    check["check"]()
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 535, in &lt;lambda&gt;
+    "check": lambda: pin_check(
+                     ^^^^^^^^^^
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/pin_check.py", line 459, in pin_check
+    raise PrecheckFailure(
+precheck_failure.PrecheckFailure: Some ports are missing or have wrong dimensions, see 3 LEF errors and 1 GDS error above
+</error>
+    </testcase>
+    <testcase name="Boundary check" time="0.01" />
+    <testcase name="Power pin check" time="0.0">
+      <error message="VGND does not have a corresponding 'USE GROUND ;'">Traceback (most recent call last):
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 589, in main
+    check["check"]()
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 545, in &lt;lambda&gt;
+    "check": lambda: power_pin_check(verilog_file, lef_file, uses_vapwr),
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/ttsky_analog_bg_26/ttsky_analog_bg_26/tt/precheck/precheck.py", line 275, in power_pin_check
+    raise PrecheckFailure(
+precheck_failure.PrecheckFailure: VGND does not have a corresponding 'USE GROUND ;'
+</error>
+    </testcase>
+    <testcase name="Layer check" time="0.01" />
+    <testcase name="Cell name check" time="0.0" />
+    <testcase name="urpm/nwell check" time="1.63" />
+    <testcase name="Analog pin check" time="0.01" />
+    <testcase name="Verilog syntax check" time="14.84" />
+  </testsuite>
+</testsuites>
